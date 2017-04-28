@@ -122,7 +122,7 @@ note: und daneben -> user defaults
 
 ---
 
-![](./n26.png)
+![](https://cloud.githubusercontent.com/assets/2625584/25534112/1e8ac058-2c33-11e7-9b73-b6cae1c74cbc.png)
 
 #### [Shut Up And Take My Money @ 33c3](https://media.ccc.de/v/33c3-7969-shut_up_and_take_my_money)
 
