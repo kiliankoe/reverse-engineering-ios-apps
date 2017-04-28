@@ -112,7 +112,7 @@ note: und daneben -> user defaults
 
 ---
 
-### Binary decrypten 🔓
+### Binary dumpen 🔓
 
 [dumpdecrypted](https://github.com/conradev/dumpdecrypted)
 
