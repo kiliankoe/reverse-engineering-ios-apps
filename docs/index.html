@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Reverse Engineering iOS Apps</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/night.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+
+<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+# Reverse Engineering iOS Apps
+</script></section><section  data-markdown><script type="text/template">
+### @kiliankoe 👋
+
+[<i class="fa fa-github" aria-hidden="true"></i>](https://github.com/kiliankoe)
+[<i class="fa fa-twitter" aria-hidden="true"></i>](https://twitter.com/kiliankoe)
+[<i class="fa fa-rss" aria-hidden="true"></i>](https://blog.kilian.io)
+</script></section><section  data-markdown><script type="text/template">
+### Was ist dieses *Reverse Engineering*?
+
+<aside class="notes"><p>Verstehen wie etwas funktioniert, nur anhand des Endergebnisses.</p>
+</aside></script></section><section ><section data-markdown><script type="text/template">
+### Und warum? 🤔
+</script></section><section data-markdown><script type="text/template">
+> *"Wie ist das gebaut?"*
+</script></section><section data-markdown><script type="text/template">
+> *"Wie schaut die API aus?"*
+</script></section><section data-markdown><script type="text/template">
+> *"Warum passiert dieser Bug?"*
+</script></section><section data-markdown><script type="text/template">
+> *"Was für Daten werden von mir gesammelt?"*
+<aside class="notes"><p>Analytics und creepy stuff (Twitter)</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template">
+### Was steckt in einer App?
+</script></section><section data-markdown><script type="text/template">
+#### Metadaten
+
+Info.plist, (UserDefaults)
+</script></section><section data-markdown><script type="text/template">
+#### Assets
+
+Bilder, Videos, Sounds, Fonts, Strings, etc.
+</script></section><section data-markdown><script type="text/template">
+#### Executable & Frameworks
+</script></section></section><section ><section data-markdown><script type="text/template">
+### Was kann man damit machen?
+</script></section><section data-markdown><script type="text/template">
+### App 🏃‍♀️
+
+Netzwerk-Zugriff
+
+Code Injection
+</script></section><section data-markdown><script type="text/template">
+### App 🛑
+
+Binaries dumpen
+
+Im Bundle umschauen
+</script></section></section><section ><section data-markdown><script type="text/template">
+### Netzwerk 📡
+</script></section><section data-markdown><script type="text/template">
+### Charles 🕵️
+
+(oder [mitmproxy](https://mitmproxy.org))
+</script></section></section><section  data-markdown><script type="text/template">
+
+### Ein Blick ins Bundle 👀
+
+<aside class="notes"><p>und daneben -&gt; user defaults</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+### Code Injection 💉
+
+[Cycript](http://www.cycript.org)
+
+<span style="font-size: 14pt">(alternativ auch [Frida](https://www.frida.re))</span>
+</script></section><section  data-markdown><script type="text/template">
+### Binary decrypten 🔓
+
+[dumpdecrypted](https://github.com/conradev/dumpdecrypted)
+
+[class-dump](https://github.com/nygard/class-dump)
+
+[iOS-Runtime-Headers](https://github.com/nst/iOS-Runtime-Headers)
+</script></section><section  data-markdown><script type="text/template">
+![](./n26.png)
+
+#### [Shut Up And Take My Money @ 33c3](https://media.ccc.de/v/33c3-7969-shut_up_and_take_my_money)
+</script></section><section  data-markdown><script type="text/template">
+### Fragen? 🙋
+</script></section><section  data-markdown><script type="text/template">
+### Dank an 🙏
+
+@saurik, @conradev, @optimo
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"<!-- controls":"false -->","progress":true};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+    </body>
+</html>
