@@ -42,11 +42,16 @@ note: Verstehen wie etwas funktioniert, nur anhand des Endergebnisses.
 ----
 
 > *"Was für Daten werden von mir gesammelt?"*
+
 note: Analytics und creepy stuff (Twitter)
 
 ---
 
 ### Was steckt in einer App?
+
+----
+
+#### Executable & Frameworks
 
 ----
 
@@ -59,10 +64,6 @@ Info.plist, (UserDefaults)
 #### Assets
 
 Bilder, Videos, Sounds, Fonts, Strings, etc.
-
-----
-
-#### Executable & Frameworks
 
 ---
 
@@ -80,9 +81,9 @@ Code Injection
 
 ### App 🛑
 
-Binaries dumpen
-
 Im Bundle umschauen
+
+Binaries dumpen
 
 ---
 
@@ -96,11 +97,9 @@ Im Bundle umschauen
 
 ---
 
-
 ### Ein Blick ins Bundle 👀
 
 note: und daneben -> user defaults
-
 
 ---
 
