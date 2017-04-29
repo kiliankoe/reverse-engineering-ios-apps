@@ -23,7 +23,7 @@ revealOptions:
 
 note: Verstehen wie etwas funktioniert, nur anhand des Endergebnisses.
 
----
+----
 
 ### Und warum? 🤔
 
@@ -133,4 +133,4 @@ note: und daneben -> user defaults
 
 ### Dank an 🙏
 
-@saurik, @conradev, @optimo
+saurik, conradev, optimo
