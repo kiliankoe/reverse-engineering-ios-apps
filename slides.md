@@ -131,6 +131,12 @@ note: und daneben -> user defaults
 
 ---
 
-### Dank an 🙏
+### Danke an 🙏
 
 saurik, conradev, optimo
+
+---
+
+### Slides
+
+[git.io/reverse-ios](https://git.io/reverse-ios)
